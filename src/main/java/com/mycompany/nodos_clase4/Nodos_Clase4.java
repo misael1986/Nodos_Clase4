@@ -3,6 +3,8 @@
  */
 package com.mycompany.nodos_clase4;
 
+import java.util.Scanner;
+
 /**
  *
  * @author misael.perilla
@@ -10,6 +12,23 @@ package com.mycompany.nodos_clase4;
 public class Nodos_Clase4 {
 
     public static void main(String[] args) {
+
+//        Nodo nodoA = new Nodo();
+//        Scanner scanner= new Scanner(System.in);
+//        nodoA.setValor(scanner.nextInt());
+//        Nodo nodoB = new Nodo();
+//        nodoB.setValor(0);
+//        Nodo nodoC = new Nodo();
+//        nodoC.setValor(32);
+//
+//        nodoA.setSiguiente(nodoC);//A contiene a C
+//        nodoB.setSiguiente(nodoA);//B contienen a A
+//        // Por ende el orden de la lista es B-A-C
+//
+//        ImprimirLista(nodoB);
+
+        
+        
         Pila pila = new Pila();
 
         System.out.println("<<-- Ejemplo de Pila -->>\n\n");
@@ -50,7 +69,6 @@ public class Nodos_Clase4 {
         System.out.println(pila.esVacia());
 
         System.out.println("\n\n<<-- Fin de ejemplo pila -->>");
-
         //--------------------------------------------------------
         //--------------------------------------------------------
         System.out.println("\n\n<<-- Ejemplo de Cola -->>\n\n");
@@ -78,6 +96,25 @@ public class Nodos_Clase4 {
 
         System.out.println("\n<<-- Mostrar Cola -->");
         cola1.listar();
+    }
 
+    public static void ImprimirLista(Nodo I) {
+        Nodo Imaginario = I;
+        while (Imaginario != null) {
+            System.out.println(Imaginario.getValor());
+            Imaginario = Imaginario.getSiguiente();
+
+        }
+
+    }
+    
+    
+    public static void LlenarLista(){
+        System.out.println("Por favor digite el valor a guardar:");
+        Scanner scanner= new Scanner(System.in);//Objeto que permite capturar de Teclado
+        //como el input () de Python
+        Nodo inicio=new Nodo();
+        inicio.setValor(scanner.nextInt());
+    
     }
 }
