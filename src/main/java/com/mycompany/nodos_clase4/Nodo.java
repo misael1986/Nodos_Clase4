@@ -23,6 +23,8 @@ public class Nodo {
         this.siguiente = null;
     }
     
+    
+    
     // Métodos get y set para los atributos.
     
     public int getValor() {
